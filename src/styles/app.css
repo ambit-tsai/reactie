@@ -1,0 +1,43 @@
+.App__brand {
+    padding-left: 24px;
+    padding-right: 24px;
+    font-size: 20px;
+    border-bottom: 1px solid #e9e9e9;
+}
+.App__brand > a {
+    color: black;
+}
+.Home {
+	margin-top: 16px;
+	font-size: 14px;
+}
+.NotFound {
+    margin-top: 24px;
+    text-align: center;
+    font-size: 20px;
+}
+.Todo {
+    margin-top: 8px;
+}
+.Todo__btn-group {
+    margin-top: 8px;
+    text-align: center;
+}
+.Todo__btn-group > button {
+    margin-right: 8px;
+}
+.Conf__table {
+    border-spacing: 8px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.Conf__table td:first-child {
+    vertical-align: top;
+    text-align: right;
+}
+.Done {
+    margin-top: 8px;
+}
+.Done tr > td:first-child {
+    text-align: center;
+}
