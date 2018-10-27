@@ -28,13 +28,13 @@ module.exports = {
 	},
 	resolve: {
 		alias: {
-			'react': 'anujs/dist/ReactIE',
-			// 'react': `${ROOT}/patch/anujs-ReactIE`,
-			'react-dom': 'anujs/dist/ReactIE',
-			// 'react-dom': `${ROOT}/patch/anujs-ReactIE`,
+			// 'react': 'anujs/dist/ReactIE',
+			// 'react-dom': 'anujs/dist/ReactIE',
+			'react': `${ROOT}/patchs/anujs-ReactIE`,
+			'react-dom': `${ROOT}/patchs/anujs-ReactIE`,
 			'create-react-class': 'anujs/lib/createClass',
-			'@reach/router': 'anujs/dist/Router',
-			// '@reach/router': `${ROOT}/patch/anujs-Router`,
+			// '@reach/router': 'anujs/dist/Router',
+			'@reach/router': `${ROOT}/patchs/anujs-Router`,
 			'redux': `${ROOT}/patchs/redux`,
 			'symbol-observable': `${ROOT}/patchs/symbol-observable`,
 			'@rematch/core': 'anujs/dist/Rematch',
@@ -57,7 +57,16 @@ module.exports = {
 		}],
 	},
 	optimization: {
-		minimize: false,
+		minimizer: [
+			new UglifyJsPlugin({
+				uglifyOptions: {
+					ie8: true,
+					mangle: {
+						toplevel: false,
+					},
+				},
+			}),
+		],
 	},
 	plugins: [
 		new DllPlugin({
@@ -67,12 +76,9 @@ module.exports = {
 		new UglifyJsPlugin({
 			uglifyOptions: {
 				ie8: true,
-				sourceMap: ENV === 'development',
-				mangle: ENV === 'development' ? false : {
-					toplevel: false,
-				},
+				mangle: false,
 				output: {
-					beautify: ENV === 'development',
+					beautify: true,
 				},
 			},
 		}),
