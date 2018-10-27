@@ -24,7 +24,7 @@ export default class App extends React.Component {
 	render() {
 		return (
 			<div>
-				<table>
+				<table className={style['App__table']}>
 					<tr>
 						<td className={style['App__brand']}>
 							<Link to="/">Reactie</Link>

@@ -1,7 +1,7 @@
 {
   "name": "reactie",
   "version": "1.0.0",
-  "description": "a solution that make react stack work in ie8",
+  "description": "A solution that makes React stack work in IE8",
   "main": "index.js",
   "scripts": {
     "dev:css": "node ./scripts/css.js",
@@ -10,13 +10,14 @@
     "dev:dll": "set NODE_ENV=development&& webpack --config ./scripts/dll.js",
     "dev:index": "set NODE_ENV=development&& webpack --config ./scripts/index.js",
     "dev-server": "set NODE_ENV=development&& webpack-dev-server --config ./scripts/index.js",
+    "build": "npm run build:css && npm run build:shim && npm run build:polyfill && npm run build:dll && npm run build:index",
     "build:css": "node ./scripts/css.js",
     "build:shim": "node ./scripts/shim.js",
     "build:polyfill": "node ./scripts/polyfill.js",
     "build:dll": "webpack --config ./scripts/dll.js",
     "build:index": "webpack --config ./scripts/index.js"
   },
-  "author": "ambit-tsai",
+  "author": "ambit_tsai@qq.com",
   "license": "MIT",
   "dependencies": {
     "@babel/polyfill": "^7.0.0",
@@ -44,6 +45,7 @@
     "eslint": "^5.8.0",
     "eslint-plugin-react": "^7.11.1",
     "html-webpack-plugin": "^3.2.0",
+    "lodash-es": "^4.17.11",
     "postcss": "^7.0.5",
     "style-loader": "^0.23.1",
     "uglify-js": "^3.4.9",
