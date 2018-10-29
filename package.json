@@ -4,6 +4,7 @@
   "description": "A solution that makes React stack work in IE8",
   "main": "index.js",
   "scripts": {
+    "dev": "npm run dev:css && npm run dev:shim && npm run dev:polyfill && npm run dev:dll && npm run dev:index",
     "dev:css": "node ./scripts/css.js",
     "dev:shim": "set NODE_ENV=development&& node ./scripts/shim.js",
     "dev:polyfill": "set NODE_ENV=development&& node ./scripts/polyfill.js",
@@ -23,9 +24,10 @@
     "@babel/polyfill": "^7.0.0",
     "antd": "^1.11.6",
     "anujs": "^1.4.8",
+    "bluebird": "^3.5.2",
     "console-polyfill": "^0.3.0",
     "es5-shim": "^4.5.11",
-    "es6-proxy-polyfill": "^1.2.0",
+    "es6-proxy-polyfill": "^1.2.1",
     "matchmedia-polyfill": "^0.3.1",
     "react-loadable": "^5.5.0",
     "react-redux": "^5.0.7"

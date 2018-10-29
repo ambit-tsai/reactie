@@ -17,10 +17,9 @@ module.exports = {
 	},
 	resolve: {
 		alias: {
-			// 'react': 'anujs/dist/ReactIE',
-			// 'react-dom': 'anujs/dist/ReactIE',
-			'react': `${ROOT}/patchs/anujs-ReactIE`,
-			'react-dom': `${ROOT}/patchs/anujs-ReactIE`,
+			'react': 'anujs/dist/ReactIE',
+			'react-dom': 'anujs/dist/ReactIE',
+			'prop-types': 'anujs/lib/ReactPropTypes',
 			'create-react-class': 'anujs/lib/createClass',
 			// '@reach/router': 'anujs/dist/Router',
 			'@reach/router': `${ROOT}/patchs/anujs-Router`,
@@ -41,9 +40,9 @@ module.exports = {
 						}],
 					],
 					plugins: [
-						['@babel/plugin-proposal-decorators', {
-							decoratorsBeforeExport: false,
-						}],
+						// ['@babel/plugin-proposal-decorators', {
+						// 	decoratorsBeforeExport: false,
+						// }],
 						['@babel/plugin-proposal-class-properties', {
 							loose: true,
 						}],
@@ -66,9 +65,9 @@ module.exports = {
 						}],
 					],
 					plugins: [
-						['@babel/plugin-proposal-decorators', {
-							decoratorsBeforeExport: false,
-						}],
+						// ['@babel/plugin-proposal-decorators', {
+						// 	decoratorsBeforeExport: false,
+						// }],
 						['@babel/plugin-proposal-class-properties', {
 							loose: true,
 						}],

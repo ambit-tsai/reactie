@@ -12,6 +12,7 @@ module.exports = {
 		'base': [
 			'react',
 			'react-dom',
+			'prop-types',
 			'create-react-class',
 			'@reach/router',
 			'react-loadable',
@@ -28,10 +29,9 @@ module.exports = {
 	},
 	resolve: {
 		alias: {
-			// 'react': 'anujs/dist/ReactIE',
-			// 'react-dom': 'anujs/dist/ReactIE',
-			'react': `${ROOT}/patchs/anujs-ReactIE`,
-			'react-dom': `${ROOT}/patchs/anujs-ReactIE`,
+			'react': 'anujs/dist/ReactIE',
+			'react-dom': 'anujs/dist/ReactIE',
+			'prop-types': 'anujs/lib/ReactPropTypes',
 			'create-react-class': 'anujs/lib/createClass',
 			// '@reach/router': 'anujs/dist/Router',
 			'@reach/router': `${ROOT}/patchs/anujs-Router`,
