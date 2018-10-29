@@ -24,23 +24,17 @@ export default class App extends React.Component {
 	render() {
 		return (
 			<div>
-				<table className={style['App__table']}>
-					<tr>
-						<td className={style['App__brand']}>
-							<Link to="/">Reactie</Link>
-						</td>
-						<td>
-							<Menu mode="horizontal">
-								<Menu.Item key="todo">
-									<Link to="todo"><Icon type="bars" />Todo</Link>
-								</Menu.Item>
-								<Menu.Item key="done">
-									<Link to="done"><Icon type="check" />Done</Link>
-								</Menu.Item>
-							</Menu>
-						</td>
-					</tr>
-				</table>
+				<Menu mode="horizontal">
+					<Menu.Item key="home" className={style['App__brand']}>
+						<Link to="/">Reactie</Link>
+					</Menu.Item>
+					<Menu.Item key="todo">
+						<Link to="todo"><Icon type="bars" />Todo</Link>
+					</Menu.Item>
+					<Menu.Item key="done">
+						<Link to="done"><Icon type="check" />Done</Link>
+					</Menu.Item>
+				</Menu>
 
 				<Router mode="hash">
 					<Home path="/" />
