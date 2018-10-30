@@ -17,10 +17,5 @@ const result = UglifyJS.minify(fileMap, {
 	sourceMap: ENV !== 'development' ? false : {
 		url: 'inline',
 	},
-	// The following configuration may be used when debugging in IE
-	// mangle: ENV !== 'development',
-	// output: {
-	// 	beautify: ENV === 'development',
-	// },
 });
 fs.writeFileSync('dist/shim.bundle.js', result.code, 'utf8');

@@ -40,9 +40,6 @@ module.exports = {
 						}],
 					],
 					plugins: [
-						// ['@babel/plugin-proposal-decorators', {
-						// 	decoratorsBeforeExport: false,
-						// }],
 						['@babel/plugin-proposal-class-properties', {
 							loose: true,
 						}],
@@ -65,9 +62,6 @@ module.exports = {
 						}],
 					],
 					plugins: [
-						// ['@babel/plugin-proposal-decorators', {
-						// 	decoratorsBeforeExport: false,
-						// }],
 						['@babel/plugin-proposal-class-properties', {
 							loose: true,
 						}],
@@ -109,6 +103,7 @@ module.exports = {
 		new UglifyJsPlugin({
 			uglifyOptions: {
 				ie8: true,
+				compress: false,
 				mangle: false,
 				output: {
 					beautify: true,

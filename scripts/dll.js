@@ -61,9 +61,8 @@ module.exports = {
 			new UglifyJsPlugin({
 				uglifyOptions: {
 					ie8: true,
-					mangle: {
-						toplevel: false,
-					},
+					toplevel: false,
+					// keep_fnames: true,
 				},
 			}),
 		],
@@ -76,6 +75,7 @@ module.exports = {
 		new UglifyJsPlugin({
 			uglifyOptions: {
 				ie8: true,
+				compress: false,
 				mangle: false,
 				output: {
 					beautify: true,
