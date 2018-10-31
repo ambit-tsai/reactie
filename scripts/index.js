@@ -22,9 +22,10 @@ module.exports = {
 			'prop-types': 'anujs/lib/ReactPropTypes',
 			'create-react-class': 'anujs/lib/createClass',
 			// '@reach/router': 'anujs/dist/Router',
-			'@reach/router': `${ROOT}/patchs/anujs-Router`,
+			'@reach/router': `${ROOT}/patchs/Router`,
 			'redux': `${ROOT}/patchs/redux`,
 			'@rematch/core': 'anujs/dist/Rematch',
+			'antd': `${ROOT}/patchs/antd`,
 		},
 	},
 	module: {

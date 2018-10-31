@@ -34,10 +34,11 @@ module.exports = {
 			'prop-types': 'anujs/lib/ReactPropTypes',
 			'create-react-class': 'anujs/lib/createClass',
 			// '@reach/router': 'anujs/dist/Router',
-			'@reach/router': `${ROOT}/patchs/anujs-Router`,
+			'@reach/router': `${ROOT}/patchs/Router`,
 			'redux': `${ROOT}/patchs/redux`,
 			'symbol-observable': `${ROOT}/patchs/symbol-observable`,
 			'@rematch/core': 'anujs/dist/Rematch',
+			'antd': `${ROOT}/patchs/antd`,
 		},
 	},
 	module: {
@@ -62,7 +63,6 @@ module.exports = {
 				uglifyOptions: {
 					ie8: true,
 					toplevel: false,
-					// keep_fnames: true,
 				},
 			}),
 		],

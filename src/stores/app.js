@@ -17,7 +17,7 @@ const todoModel = {
 		},
 		modify(state, record) {
 			return state.map(item => (
-				item.uid === record.uid ? record : item
+				item.uid === record.uid ? { ...record } : item
 			));
 		},
 	},

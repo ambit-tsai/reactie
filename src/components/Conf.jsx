@@ -57,7 +57,7 @@ export default class Conf extends React.PureComponent {
 		const startTime = Date.parse(dateStr) || 0;
 		const endTime = Date.parse(this.state.endTime) || 0;
 		if (startTime && endTime && startTime > endTime) {
-			message.warning('The start time must be less than or equal to the end time');
+			message.warning('Start Time should not be greater than End Time');
 		}
 		this.setState({ startTime: dateStr }, () => this.onChange());
 	}
@@ -66,14 +66,14 @@ export default class Conf extends React.PureComponent {
 		const startTime = Date.parse(this.state.startTime) || 0;
 		const endTime = Date.parse(dateStr) || 0;
 		if (startTime && endTime && startTime > endTime) {
-			message.warning('The end time must be greater than or equal to the start time');
+			message.warning('End Time should not be less than Start Time');
 		}
 		this.setState({ endTime: dateStr }, () => this.onChange());
 	}
 
 	onChangeContent(event) {
 		const content = event.target.value.trim();
-		if (!content) message.warning('The content should not be empty');
+		if (!content) message.warning('Content should not be empty');
 		this.setState({ content }, () => this.onChange());
 	}
 }

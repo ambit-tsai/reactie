@@ -57,7 +57,11 @@ class Todo extends React.Component {
 				</div>
 
 				<Add ref={this.addRef} />
-				<Modify ref={this.modifyRef} data={this.state.selectedRows[0]} />
+				<Modify 
+					ref={this.modifyRef} 
+					data={this.state.selectedRows[0]} 
+					onModify={this.onModify.bind(this)}
+				/>
 			</div>
 		);
 	}
@@ -86,12 +90,16 @@ class Todo extends React.Component {
 	onClickDoneButton() {
 		this.props.doneDispatch.add(this.state.selectedRows);
 		this.deleteSelectedRows();
-		message.success('The records have turned into the done state');
+		message.success('Turned into the done state');
 	}
 
 	onClickDeleteButton() {
 		this.deleteSelectedRows();
-		message.success('The records have been deleted successfully');
+		message.success('Deleted successfully');
+	}
+
+	onModify(rowData) {
+		this.setState({ selectedRows: [rowData] });
 	}
 }
 

@@ -1,7 +1,9 @@
 li.App__brand[role="menuitem"], li.App__brand[role="menuitem"]:hover {
     font-size: 20px;
     border-bottom: 2px solid transparent;
-    color: #666;
+}
+li.App__brand[role="menuitem"] > a {
+    color: black;
 }
 .Home {
 	margin-top: 16px;

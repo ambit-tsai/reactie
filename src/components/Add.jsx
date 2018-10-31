@@ -41,6 +41,6 @@ export default class Add extends React.PureComponent {
 
 	save() {
 		store.dispatch.todoModel.add(this.data);
-		message.success('The record is added successfully');
+		message.success('Added successfully');
 	}
 }

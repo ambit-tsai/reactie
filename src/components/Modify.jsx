@@ -46,6 +46,7 @@ export default class Modify extends React.PureComponent {
 	save() {
 		this.data.uid = this.props.data.uid;
 		store.dispatch.todoModel.modify(this.data);
-		message.success('The record is modified successfully');
+		this.props.onModify({ ...this.data });
+		message.success('Modified successfully');
 	}
 }
