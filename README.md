@@ -9,16 +9,16 @@
 #### Shim与Polyfill
 
 1. ES5环境
- 1.1. es5-shim
- 1.2. es5-sham
- 1.3. `window.console`
+    1. es5-shim
+    2. es5-sham
+    3. `window.console`
 2. ES6环境
- 1. babel polyfill
- 2. Proxy对象
- 3. window.matchMedia
- 4. window.fetch
- 5. Promise对象
- 6. HTML5元素
+    1. babel polyfill
+    2. Proxy对象
+    3. window.matchMedia
+    4. window.fetch
+    5. Promise对象
+    6. HTML5元素
 
 #### 编译与打包
 
