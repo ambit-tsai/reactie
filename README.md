@@ -8,17 +8,17 @@
 
 #### Shim与Polyfill
 
-1. ES5环境
-    1. es5-shim
-    2. es5-sham
-    3. `window.console`
-2. ES6环境
-    1. babel polyfill
-    2. Proxy对象
+1. Shim
+    1. <a href="https://github.com/es-shims/es5-shim/" target="_blank">es5-shim</a>：在旧的JS引擎中完美模拟ES5的大部分方法；
+    2. <a href="https://github.com/es-shims/es5-shim/" target="_blank">es5-sham</a>：为部分无法被完美模拟的方法提供支持；
+    3. <a href="https://github.com/paulmillr/console-polyfill/" target="_blank">console-polyfill</a>：保证`window.console`的安全使用；
+2. Polyfill
+    1. <a href="https://babeljs.io/docs/en/babel-polyfill/" target="_blank">@babel/polyfill</a>
+    2. <a href="https://github.com/ambit-tsai/es6-proxy-polyfill/" target="_blank">es6-proxy-polyfill</a>
     3. window.matchMedia
     4. window.fetch
     5. Promise对象
-    6. HTML5元素
+    6. <a href="https://github.com/aFarkas/html5shiv/" target="_blank">html5shiv</a>
 
 #### 编译与打包
 
