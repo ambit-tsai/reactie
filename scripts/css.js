@@ -10,9 +10,12 @@ const processor = postcss([
 ]);
 const fileArr = [
 	'node_modules/antd/dist/antd.css',
-	'src/styles/iconfont.css',
+	// 'src/styles/iconfont.css',
 	'src/styles/global.css',
 ];
+const options = {
+	from: undefined,
+};
 
 (async () => {
 	const readFile = util.promisify(fs.readFile);
@@ -20,7 +23,7 @@ const fileArr = [
 	for (let file of fileArr) {
 		let result = await readFile(file, 'utf8');
 		if(typeof result !== 'string') continue;
-		result = await processor.process(result);
+		result = await processor.process(result, options);
 		cssText += result.css;
 	}
 	cssText = cssText.replace(/https:\/\/at\.alicdn\.com\/t\/font_1463992151_360388/g, 'static/font/iconfont');
