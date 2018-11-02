@@ -40,7 +40,7 @@ export default class Conf extends React.PureComponent {
 						<Input 
 							type="textarea" 
 							rows={4}
-							defaultValue={this.state.content}
+							value={this.state.content}
 							onChange={this.onChangeContent.bind(this)}
 						/>
 					</td>
