@@ -19,7 +19,7 @@
 1. <a href="https://github.com/RubyLouvre/fetch-polyfill/" target="_blank">fetch-polyfill2</a>：`window.fetch`
 1. <a href="https://github.com/aFarkas/html5shiv/" target="_blank">html5shiv</a>：HTML5元素
 1. <a href="https://github.com/paulirish/matchMedia.js/" target="_blank">matchmedia-polyfill</a>：`window.matchMedia`
-1. <a href="https://github.com/scottjehl/Respond/" target="_blank">Respond.js</a>：A fast & lightweight polyfill for min/max-width CSS3 Media Queries
+1. <a href="https://github.com/scottjehl/Respond/" target="_blank">Respond.js</a>：用于为 IE6-8 及其它不支持 CSS3 Media Queries 的浏览器提供媒体查询的min-width和max-width特性
 
 #### 编译与打包
 

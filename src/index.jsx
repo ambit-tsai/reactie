@@ -1,3 +1,4 @@
+import React from 'react';
 import ReactDOM from 'react-dom';
 import 'create-react-class';	// needed by antd 1.x
 import App from './components/App.jsx';
