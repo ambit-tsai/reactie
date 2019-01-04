@@ -1,7 +1,7 @@
-const context = typeof global==='object'? global: typeof window==='object'? window: this;
+const context = typeof global === 'object'? global: (typeof window === 'object'? window: this);
 const Symbol = context.Symbol;
-let result;
 
+let result;
 if (typeof Symbol === 'function') {
     if (Symbol.observable) {
         result = Symbol.observable;

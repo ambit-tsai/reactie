@@ -2,6 +2,8 @@
   "name": "reactie",
   "version": "1.0.0",
   "description": "A solution that makes React stack work in IE8",
+  "author": "ambit_tsai@qq.com",
+  "license": "MIT",
   "scripts": {
     "dev": "npm run dev:css && npm run dev:shim && npm run dev:polyfill && npm run dev:dll && npm run dev:index",
     "dev:css": "node ./scripts/css.js",
@@ -17,8 +19,6 @@
     "build:dll": "webpack --config ./scripts/dll.js",
     "build:index": "webpack --config ./scripts/index.js"
   },
-  "author": "ambit_tsai@qq.com",
-  "license": "MIT",
   "dependencies": {
     "@babel/polyfill": "^7.0.0",
     "antd": "^1.11.6",
@@ -33,7 +33,6 @@
   "devDependencies": {
     "@babel/core": "^7.1.0",
     "@babel/plugin-proposal-class-properties": "^7.1.0",
-    "@babel/plugin-proposal-decorators": "^7.1.2",
     "@babel/plugin-syntax-dynamic-import": "^7.0.0",
     "@babel/preset-env": "^7.1.0",
     "@babel/preset-react": "^7.0.0",

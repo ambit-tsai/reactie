@@ -6,11 +6,12 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 
+
 module.exports = {
 	mode: ENV || 'production',
 	devtool: ENV === 'development' ? 'source-map' : undefined,
 	context: ROOT,
-	entry: './src/index.jsx',
+	entry: `${ROOT}/src/index.jsx`,
 	output: {
 		path: `${ROOT}/dist`,
 		filename: 'index.js',
@@ -21,7 +22,6 @@ module.exports = {
 			'react-dom': 'anujs/dist/ReactIE',
 			'prop-types': 'anujs/lib/ReactPropTypes',
 			'create-react-class': 'anujs/lib/createClass',
-			// '@reach/router': 'anujs/dist/Router',
 			'@reach/router': `${ROOT}/patchs/Router`,
 			'redux': `${ROOT}/patchs/redux`,
 			'@rematch/core': 'anujs/dist/Rematch',
@@ -96,12 +96,12 @@ module.exports = {
 	plugins: [
 		new webpack.DllReferencePlugin({
 			context: ROOT,
-			manifest: './dist/base.manifest.json',
+			manifest: `${ROOT}/src/base.manifest.json`,
 		}),
 		new HtmlWebpackPlugin({
-			template: './src/index.html',
+			template: `${ROOT}/src/index.html`,
 		}),
-		new UglifyJsPlugin({
+		new UglifyJsPlugin({	// development
 			uglifyOptions: {
 				ie8: true,
 				compress: false,
@@ -117,7 +117,7 @@ module.exports = {
 			to: 'static',
 		}], {}),
 	],
-	devServer: {
+	devServer: {	// didn't work on IE8
 		contentBase: `${ROOT}/dist`,
 	},
 };

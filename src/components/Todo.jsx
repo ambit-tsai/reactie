@@ -1,13 +1,15 @@
 import React from 'react';
 import { Provider, connect } from 'react-redux';
-import store from '../stores/app';
-import style from '../styles/app.css';
 import Add from './Add.jsx';
 import Modify from './Modify.jsx';
 import { Table, Button, message } from 'antd';
+import store from '../stores/app';
+import style from '../styles/app.css';
 
 
 class Todo extends React.Component {
+	addRef = React.createRef();
+	modifyRef = React.createRef();
 	state = {
 		selectedRows: [],
 		selectedRowKeys: [],
@@ -27,8 +29,6 @@ class Todo extends React.Component {
 		key: 'content',
 		dataIndex: 'content',
 	}];
-	addRef = React.createRef();
-	modifyRef = React.createRef();
 
 	render() {
 		return (

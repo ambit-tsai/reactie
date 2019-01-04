@@ -1,8 +1,9 @@
+const ENV = process.env.NODE_ENV;
 const path = require('path');
 const ROOT = path.resolve(__dirname, '../');
-const ENV = process.env.NODE_ENV;
 const DllPlugin = require('webpack').DllPlugin;
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+
 
 module.exports = {
 	mode: ENV || 'production',
@@ -23,7 +24,7 @@ module.exports = {
 		],
 	},
 	output: {
-		path: `${ROOT}/dist`,
+		path: `${ROOT}/src/static`,
 		filename: '[name].dll.js',
 		library: '_React_DLL_[name]',
 	},
@@ -31,9 +32,8 @@ module.exports = {
 		alias: {
 			'react': 'anujs/dist/ReactIE',
 			'react-dom': 'anujs/dist/ReactIE',
-			'prop-types': 'anujs/lib/ReactPropTypes',
 			'create-react-class': 'anujs/lib/createClass',
-			// '@reach/router': 'anujs/dist/Router',
+			'prop-types': 'anujs/lib/ReactPropTypes',
 			'@reach/router': `${ROOT}/patchs/Router`,
 			'redux': `${ROOT}/patchs/redux`,
 			'symbol-observable': `${ROOT}/patchs/symbol-observable`,
@@ -70,9 +70,9 @@ module.exports = {
 	plugins: [
 		new DllPlugin({
 			name: '_React_DLL_[name]',
-			path: `${ROOT}/dist/[name].manifest.json`,
+			path: `${ROOT}/src/[name].manifest.json`,
 		}),
-		new UglifyJsPlugin({
+		new UglifyJsPlugin({	// development
 			uglifyOptions: {
 				ie8: true,
 				compress: false,

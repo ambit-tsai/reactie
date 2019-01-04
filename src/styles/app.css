@@ -1,4 +1,5 @@
-li.App__brand[role="menuitem"], li.App__brand[role="menuitem"]:hover {
+li.App__brand[role="menuitem"], 
+li.App__brand[role="menuitem"]:hover {
     font-size: 20px;
     border-bottom: 2px solid transparent;
 }
@@ -6,8 +7,22 @@ li.App__brand[role="menuitem"] > a {
     color: black;
 }
 .Home {
-	margin-top: 16px;
-	font-size: 14px;
+    width: 490px;
+    margin-left: auto;
+    margin-right: auto;
+	font-size: 18px;
+}
+.Home > h2 {
+    margin-top: 24px;
+    text-align: center;
+}
+.Home > ul {
+    margin-top: 8px;
+}
+:global(.ant-menu > .ant-menu-item).repo {
+    float: right;
+    font-size: 32px;
+    border-bottom: 2px solid transparent;
 }
 .NotFound {
     margin-top: 24px;
@@ -29,7 +44,7 @@ li.App__brand[role="menuitem"] > a {
     margin-left: auto;
     margin-right: auto;
 }
-.Conf__table td:first-child {
+.Conf__table > tr > td:first-child {
     vertical-align: top;
     text-align: right;
 }

@@ -13,13 +13,13 @@ export default class Add extends React.PureComponent {
 	render() {
 		return (
 			<Modal
+				visible={this.state.visible}
 				title="Add"
 				width="350px"
 				maskClosable={false} 
-				visible={this.state.visible}
 				okText="Save"
-				onOk={this.save.bind(this)}
 				cancelText="Cancel"
+				onOk={this.save.bind(this)}
 				onCancel={this.close.bind(this)}
 			>
 				<Conf onChange={this.onChange.bind(this)} />

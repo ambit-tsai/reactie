@@ -1,15 +1,15 @@
-// Library
+// Librarys
 import React from 'react';
 import Loadable from 'react-loadable';
 import { Link, Router } from '@reach/router';
-// Component
+// Components
 import Home from './Home.jsx';
 import NotFound from './NotFound.jsx';
 import Loading from './Loading.jsx';
 import { Menu, Icon } from 'antd';
 // Others
 import style from '../styles/app.css';
-// Async Component
+// Async Components
 const Todo = Loadable({
 	loader: () => import('./Todo.jsx'),
 	loading: Loading,
@@ -33,6 +33,11 @@ export default class App extends React.Component {
 					</Menu.Item>
 					<Menu.Item key="done">
 						<Link to="done"><Icon type="check" />Done</Link>
+					</Menu.Item>
+					<Menu.Item key="repo" className={style['repo']}>
+						<a href="https://github.com/ambit-tsai" target="_blank">
+							<Icon type="github" />
+						</a>
 					</Menu.Item>
 				</Menu>
 

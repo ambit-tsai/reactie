@@ -1,6 +1,6 @@
 import React from 'react';
-import style from '../styles/app.css';
 import { DatePicker, Input, message } from 'antd';
+import style from '../styles/app.css';
 
 
 export default class Conf extends React.PureComponent {

@@ -1,8 +1,8 @@
 import React from 'react';
 import { Provider, connect } from 'react-redux';
+import { Table } from 'antd';
 import store from '../stores/app';
 import style from '../styles/app.css';
-import { Table } from 'antd';
 
 
 class Done extends React.Component {

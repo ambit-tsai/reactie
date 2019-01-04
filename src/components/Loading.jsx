@@ -1,5 +1,5 @@
 
-export default props => {
+export default function Loading(props) {
 	if (props.error) {
 		console.error(props.error);
 		return (
@@ -12,4 +12,4 @@ export default props => {
 			<div className="loading">Loading...</div>
 		);
 	}
-};
+}
