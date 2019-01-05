@@ -13,7 +13,7 @@ module.exports = {
 	context: ROOT,
 	entry: `${ROOT}/src/index.jsx`,
 	output: {
-		path: `${ROOT}/dist`,
+		path: `${ROOT}/docs`,
 		filename: 'index.js',
 	},
 	resolve: {
@@ -118,6 +118,6 @@ module.exports = {
 		}], {}),
 	],
 	devServer: {	// didn't work on IE8
-		contentBase: `${ROOT}/dist`,
+		contentBase: `${ROOT}/docs`,
 	},
 };
