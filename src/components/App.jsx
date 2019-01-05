@@ -35,7 +35,7 @@ export default class App extends React.Component {
 						<Link to="done"><Icon type="check" />Done</Link>
 					</Menu.Item>
 					<Menu.Item key="repo" className={style['repo']}>
-						<a href="https://github.com/ambit-tsai" target="_blank">
+						<a href="https://github.com/ambit-tsai/reactie/" target="_blank">
 							<Icon type="github" />
 						</a>
 					</Menu.Item>

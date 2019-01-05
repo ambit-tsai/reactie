@@ -48,10 +48,10 @@ Choose the shims or polyfills that you need.
   })
 ]
 
-// before
+// Before
 var obj = { default: 1 };
 
-// after
+// After
 var obj = { "default": 1 };
 ```
 4. *Module Alias*: Create aliases to `import` or `require` certain modules more easily, for example using the React-like library `anujs` instead of `React`
