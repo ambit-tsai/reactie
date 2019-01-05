@@ -6,25 +6,27 @@ li.App__brand[role="menuitem"]:hover {
 li.App__brand[role="menuitem"] > a {
     color: black;
 }
+:global(.ant-menu > .ant-menu-item).repo {
+    float: right;
+    border-bottom: 2px solid transparent;
+    padding: 0 10px;
+    font-size: 28px;
+}
 .Home {
+    margin-bottom: 16px;
     text-align: center;
 }
 .Home__content {
     display: inline-block;
-    font-size: 18px;
+    font-size: 16px;
 }
-.Home__content > h2 {
-    margin-top: 24px;
+.Home__content > h3 {
+    margin-top: 16px;
     text-align: center;
 }
 .Home__content > ul {
     margin-top: 8px;
     text-align: left;
-}
-:global(.ant-menu > .ant-menu-item).repo {
-    float: right;
-    font-size: 32px;
-    border-bottom: 2px solid transparent;
 }
 .NotFound {
     margin-top: 24px;
