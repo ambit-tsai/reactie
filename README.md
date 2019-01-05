@@ -1,7 +1,7 @@
 [简体中文](README.zh-CN.md) | English
 
 # Reactie
-This solution will show you how to use React stack in IE8, than you don't have to change the technology stack when the customer uses legacy browser. It uses ES6, Webpack, Babel, ESLint, Ant Design 1.x, React 16, Reach, Rematch, etc. See <a href="https://ambit.gitee.io/reactie/" target="_blank">Reactie Todo</a>.
+This solution will show you how to use React stack in IE8, than you don't have to change the technology stack when the customer uses legacy browser. It uses ES6, Webpack, Babel, ESLint, Ant Design 1.x, React 16, Reach, Rematch, etc. See <a href="https://ambit-tsai.github.io/reactie/" target="_blank">Reactie Todo</a>.
 
 
 #### Shim&Polyfill
