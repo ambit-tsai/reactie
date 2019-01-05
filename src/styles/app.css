@@ -7,17 +7,19 @@ li.App__brand[role="menuitem"] > a {
     color: black;
 }
 .Home {
-    width: 490px;
-    margin-left: auto;
-    margin-right: auto;
-	font-size: 18px;
+    text-align: center;
 }
-.Home > h2 {
+.Home__content {
+    display: inline-block;
+    font-size: 18px;
+}
+.Home__content > h2 {
     margin-top: 24px;
     text-align: center;
 }
-.Home > ul {
+.Home__content > ul {
     margin-top: 8px;
+    text-align: left;
 }
 :global(.ant-menu > .ant-menu-item).repo {
     float: right;
