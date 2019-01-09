@@ -14,7 +14,7 @@ Choose the shims and polyfills you need.
 1. <a href="https://github.com/petkaantonov/bluebird/" target="_blank">bluebird</a>: A full featured `Promise` library with unmatched performance;
 1. <a href="https://github.com/camsong/fetch-ie8/" target="_blank">fetch-ie8</a>: A `window.fetch` JavaScript polyfill supporting IE8;
 1. <a href="https://github.com/RubyLouvre/fetch-polyfill/" target="_blank">fetch-polyfill2</a>: The `fetch` polyfill which supports all mainstream browsers, even IE6, IE7, IE8;
-1. <a href="https://github.com/aFarkas/html5shiv/" target="_blank">html5shiv</a>: This enables use of HTML5 sectioning elements in legacy Internet Explorer and provides basic HTML5 styling for Internet Explorer 6-9, Safari 4.x (and iPhone 3.x), and Firefox 3.x;
+1. <a href="https://github.com/aFarkas/html5shiv/" target="_blank">html5shiv</a>: This library enables use of HTML5 sectioning elements in legacy Internet Explorer and provides basic HTML5 styling for Internet Explorer 6-9, Safari 4.x (and iPhone 3.x), and Firefox 3.x;
 1. <a href="https://github.com/paulirish/matchMedia.js/" target="_blank">matchmedia-polyfill</a>: A polyfill for testing whether a CSS media type or media query applies;
 1. <a href="https://github.com/scottjehl/Respond/" target="_blank">Respond.js</a>: A fast & lightweight polyfill for min/max-width CSS3 Media Queries (for IE 6-8, and more);
 1. ...
